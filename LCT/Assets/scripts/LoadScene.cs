@@ -26,7 +26,7 @@ public class LoadScene : MonoBehaviour
     private void Update()
     {
         loadingProgress = loadingOperation.progress;
-        IncrementProgress(targetProgress);
+        IncrementProgress();
 
         if (progressBar.value < targetProgress)
         {
@@ -52,7 +52,7 @@ public class LoadScene : MonoBehaviour
         }
     }
 
-    public void IncrementProgress(float targetProgress)
+    public void IncrementProgress()
     {
          this.targetProgress = progressBar.value + loadingProgress;
     }
